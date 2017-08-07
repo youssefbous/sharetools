@@ -10,9 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170807133438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "start_date", null: false
+    t.datetime "end_date",   null: false
+    t.integer  "user_id",    null: false
+    t.integer  "tool_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tool_id"], name: "index_bookings_on_tool_id", using: :btree
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string   "title",          null: false
+    t.string   "caracteristics", null: false
+    t.string   "description",    null: false
+    t.integer  "price_per_day",  null: false
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["user_id"], name: "index_tools_on_user_id", using: :btree
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.string   "address",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bookings", "tools"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "tools", "users"
 end

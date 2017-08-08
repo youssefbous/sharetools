@@ -8,15 +8,19 @@ class ToolsController < ApplicationController
   end
 
   def create
-    @tool = Tool.new(user_params)
-    @tool.save
+    @tool = Tool.new(tool_params)
+    @tool.user = current_user
 
-    redirect_to tools_path
+    if @tool.save
+      redirect_to tool_path(@tool)
+    else
+      render 'new'
+    end
   end
 
   private
 
-  def user_params
-    params.require(:tool).permit(:title, :description, :caracteristics)
+  def tool_params
+    params.require(:tool).permit(:title, :description, :caracteristics, :price_per_day)
   end
 end

@@ -7,6 +7,10 @@ class ToolsController < ApplicationController
     @tool = Tool.new
   end
 
+  def show
+    @tool = Tool.find(params[:id])
+  end
+
   def create
     @tool = Tool.new(tool_params)
     @tool.user = current_user

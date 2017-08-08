@@ -1,4 +1,7 @@
 class ToolsController < ApplicationController
+  def index
+    @tools = Tool.all
+  end
 
   def new
     @tool = Tool.new
@@ -17,4 +20,3 @@ class ToolsController < ApplicationController
     params.require(:tool).permit(:title, :description, :caracteristics)
   end
 end
-

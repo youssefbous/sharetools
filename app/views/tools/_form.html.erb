@@ -1,0 +1,15 @@
+<title>Tell us a bit more about the tool you want to share with the community</title>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <%= simple_form_for(@tool) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description, label: 'toto' %>
+        <%= f.input :caracteristics %>
+        <%= f.input :price_per_day %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

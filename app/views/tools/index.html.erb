@@ -5,11 +5,9 @@
     <% @tools.each do |tool| %>
       <div class="tool">
         <h3><%= link_to tool.title %></h3>
-
-        <p><%= tool.price_per_day %> €/per day</p>
-        <p><%= tool.caracteristics %></p>
-        <p><%= tool.description %></p>
-      </div>
-    <% end %>
-  </class>
-</div>
+    <h3><%= link_to tool.title, tool_path(tool) %></h3>
+    <p><%= tool.caracteristics %></p>
+    <p><%= tool.description %></p>
+    <p><%= tool.price_per_day %> €/per day</p>
+  </div>
+<% end %>

@@ -1,18 +1,29 @@
 
 .footer {
-  color: #ACADAC;
-  height: 70px;
-  background: #606060;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  color: #ACADAC;
+  height: $footer-height;
+  background: #606060;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  vertical-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
 }
 
 .footer-links {
   color: #ACADAC;
   margin-left: 50px;
+  vertical-align: center;
 }
 
 .footer-copyright {
-  margin-right: 50px;
+  margin-right: none;
+  margin-left: 4em;
 }
+

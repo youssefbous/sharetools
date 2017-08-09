@@ -2,28 +2,49 @@ h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: helvetica;
-  color: black;
   border-radius: 5px;
 }
 
 label {
-  // color: orange;
+  color: #dd7e18;
   opacity: 0.5;
-}
-
-input.carac {
+  font-size: 20px;
   border-radius: 6px;
   font-weight: normal;
   width:300px;
-  height:100px;
+  text-align: center;
 }
 
-input.description {
-  border-radius: 6px;
-  font-weight: normal;
-  width:300px;
+.btn.btn-default {
+  width: 24em;
+  length: 10em;
 }
 
-.tool_description label {
-  color: red;
+.btn.btn-default .hoover {
+  background: orange;
+  transition: 0,7s;
+}
+
+abbr[title="required"] {
+  display: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 5px;
+    hoover: orange;
+}
+
+a {
+  color: #469AE0;
+}
+
+textarea.form-control {
+  height: 242px;
+  border-radius: 5px;
+}
+
+.form-control {
+  border-radius: 5px;
 }

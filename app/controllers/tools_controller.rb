@@ -1,6 +1,7 @@
 class ToolsController < ApplicationController
+  # GET /tools?query=bouilloire
   def index
-    @tools = Tool.all
+    @tools = Tool.where("title ilike ?", "%#{params[:query]}%")
   end
 
   def new

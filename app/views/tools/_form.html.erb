@@ -1,15 +1,17 @@
-<title>Tell us a bit more about the tool you want to share with the community</title>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8">
-      <%= simple_form_for(@tool) do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description, label: 'toto' %>
-        <%= f.input :caracteristics %>
-        <%= f.input :price_per_day %>
-        <%= f.button :submit %>
-      <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+       <title>Tell us a bit more about the tool you want to share with the community</title>
+        <BR>
+        <%= simple_form_for(@tool) do |f| %>
+          <%= f.input :title, label:'Whats the title of the tool ?', placeholder: 'Hammer' %>
+          <%= f.input :description, label: 'Tell us a bit more about your tool', placeholder: 'I sell a beautiful hammer for companies or private people.' %>
+          <%= f.input :caracteristics, placeholder: 'This tool is orange, and is quite heavy !', label: 'How would you describe your tool ?' %>
+          <%= f.input :price_per_day, placeholder: '20$/day', label: 'Whats the price per day of your tool?' %>
+        <BR>
+          <%= f.button :submit %>
+        <% end %>
+        <BR>
+      </div>
     </div>
   </div>
-</div>

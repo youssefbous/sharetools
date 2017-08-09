@@ -6,5 +6,15 @@
     <p> <%= @tool.price_per_day %> </p>
     <%= link_to 'Edit', edit_tool_path %>
     <%= link_to 'Back', tools_path %>
+
+      <BR>
+      <H2>Book this tool !</H2>
+      <%= simple_form_for([@tool, @booking]) do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+      <BR>
+        <%= f.button :submit %>
+      <% end %>
+      <BR>
   </div>
 </div>

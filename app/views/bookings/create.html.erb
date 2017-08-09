@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+     <title>Book this tool !</title>
+      <BR>
+      <%= simple_form_for(@booking) do |f| %>
+        <%= f.input @booking.tool %>
+        <%= f.input @booking.user %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+      <BR>
+        <%= f.button :submit %>
+      <% end %>
+      <BR>
+    </div>
+  </div>
+</div>

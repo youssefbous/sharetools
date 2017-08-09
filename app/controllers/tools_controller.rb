@@ -9,6 +9,7 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit

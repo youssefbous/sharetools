@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
-  # def index
-  #   @booking = Booking.all
-  # end
 
-  # def show
-  #   @booking = Booking.find(params[:id])
-  # end
+  def index
+    @bookings = current_user.bookings
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @tool = Tool.new
+  end
 
   # def edit
   #   @tool = Tool.find(params[:id])
@@ -39,4 +41,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
   end
+
 end

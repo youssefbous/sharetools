@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
 Tool.destroy_all
+User.destroy_all
+
 puts 'Creating tools...'
-user = User.create(name: "ben", email: "ben@hotmail.com", password: "password")
+user = User.create!(name: "ben", email: "ben@hotmail.com", password: "password")
 tondeuse = Tool.new(title: "Tondeuse", caracteristics: "Ne consomme pratiquement rien, bac de 50L d'herbes.", description: "Salut, je suis français mais je vis aux states, j'ai une tondeuse en Très bon état à prêter !", user: user, price_per_day: 20 )
 tondeuse.save!
 hammer = Tool.new(title: "Hammer", caracteristics: "The hammer is orange, solid and a bit heavy.", description: "Oh my god, it's such a beautiful hammer, my grandpa gave it to me when I was 6 YO !", user: user, price_per_day: 2 )

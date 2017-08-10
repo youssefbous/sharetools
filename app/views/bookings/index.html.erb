@@ -1,0 +1,17 @@
+<div class="title">
+  <h2>Here is the list of your bookings ! </h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="booking">
+      <% @bookings.each do |booking| %>
+        <p><%= booking.tool.title %></p>
+        <p><%= booking.user.email %></p>
+        <p><%= booking.start_date %></p>
+        <p><%= booking.end_date %></p>
+        <p>          ------------          </p>
+        <%= link_to 'Your booking', booking_path(booking) %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="title">
+  <h2>Your booking <%= @booking.tool.title %> : </h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="list tool">
+      <p><%= @booking.user.email %></p>
+      <p>from : <%= @booking.start_date %></p>
+      <p>to : <%= @booking.end_date %></p>
+    </div>
+</div>

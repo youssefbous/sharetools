@@ -9,26 +9,48 @@
   background-color: rgba(240, 240, 240, 1);
 }
 
+.banner-content {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.banner#btn-dreamlist-banner {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
 .btn-primary {
   border-radius: 3px;
+  color: white;
+  text-align: center;
 }
 
 h1 {
-  color:  #F76814;
+  color:  white;
   margin-left: 10px;
 }
 
 h2 {
-  color:  #F76814;
+  color: white;
   margin-left: 15px;
 }
 
 h3 {
-  color:  #F76814;
+  color:  white;
   font-weight: lighter;
   margin-left: 20px;
 }
 
 .navbar-form .form-control {
   width: 250px;
+  color: white;
+  text-align: center;
 }
+
+.navbar-middle {
+  text-align: center;
+}
+
+

@@ -51,6 +51,10 @@ a.navbar-wagon-item.navbar-wagon-link {
   padding: 0 20px;
 }
 
+a.navbar-wagon-item.navbar-wagon-link {
+  position: right;
+}
+
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
@@ -91,3 +95,15 @@ a.navbar-wagon-item.navbar-wagon-link {
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+a {
+  background-color: transparent;
+}
+
+a .navbar-wagon-brand {
+  vertical-align: middle;
+  background-color: transparent;
+  height: 50px;
+  text-align: center;
+}
+

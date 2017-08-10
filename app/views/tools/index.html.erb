@@ -1,14 +1,21 @@
-<div class="title">
-  <h2>Here is the list of all the tools :</h2>
-</div>
 <div class="container">
   <div class="row">
-    <div class="list tool">
-      <% @tools.each do |tool| %>
-      <h3><%= link_to tool.title, tool_path(tool) %></h3>
-      <p><%= tool.caracteristics %></p>
-      <p><%= tool.description %></p>
-      <p><%= tool.price_per_day %> €/per day</p>
-    </div>
+  <% @tools.each do |tool| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="card-header">
+            <h1><%= tool.title.upcase %></h1>
+            <h1><%= tool.price_per_day %> €/day</h1>
+          </div>
+          <div class="card-image" style="background-image: url('<%= image_path("drill.jpg") %>')" %>
+          </div>
+          <div class="card-description">
+            <p><%= tool.description %></p>
+          </div>
+
+          <%= link_to "", tool_path(tool) %>
+        </div>
+      </div>
+    <% end -%>
   </div>
-<% end %>
+</div>

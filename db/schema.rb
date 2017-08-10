@@ -30,8 +30,11 @@ ActiveRecord::Schema.define(version: 20170809150644) do
     t.string   "title",          null: false
     t.text     "caracteristics", null: false
     t.text     "description",    null: false
+    t.integer  "price_per_day",  null: false
+    t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.index ["user_id"], name: "index_tools_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,4 +57,5 @@ ActiveRecord::Schema.define(version: 20170809150644) do
 
   add_foreign_key "bookings", "tools"
   add_foreign_key "bookings", "users"
+  add_foreign_key "tools", "users"
 end

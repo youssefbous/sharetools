@@ -1,19 +1,13 @@
 <body>
   <div id="banner">
-    <BR>
-    <BR>
-    <BR>
     <div class="banner-content">
-      <h2>Borrow professionals tools</h2>
+      <h2>Borrow professional tools</h2>
       <h3>Just do it like a pro !</h3>
-        <form action="<%= tools_path %>" class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" name="query" class="form-control" placeholder="Search">
-        </div>
-
+      <form action="<%= tools_path %>" class="navbar-form navbar-left" role="search">
+        <input type="text" name="query" class="form-control" placeholder="Search">
         <button type="submit" class="btn btn-primary">Search</button>
         <%= link_to 'See all tools', tools_path, class: 'btn btn-primary' %>
-        </form>
+      </form>
     </div>
   </div>
 </body>

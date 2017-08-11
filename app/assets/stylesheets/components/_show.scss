@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  background: #F4F4F4;
+}
+p {
+  font-weight: lighter;
+}
+h1, h2, h3 {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+}
+h1 .card-header{
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 23px;
+}
+.padded {
+  padding: 30px 0;
+}
+
+h3 #title {
+  font-weight: 50px;
+}
+
+.main {
+  position: center;
+  text-align: center;
+}
+
+.main, .description, .stat {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 50px;
+  margin: 10px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main h2 {
+  font-size: 22px;
+}
+.main h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.main p {
+  color: rgba(0,0,0,0.6);
+}
+.main .btn {
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  margin-top: 30px;
+  background: #37B686;
+  margin-bottom: 10px;
+}
+.profile .btn:hover {
+  background: #37B686;
+  opacity: 0.7;
+}
+.stat h3 {
+  color: #37B686;
+  font-size: 28px;
+}
+.stat p {
+  color: rgba(0,0,0,0.25);
+  font-size: 19px;
+}
+.description h3 {
+  color: rgba(0,0,0,0.9);
+  font-size: 21px;
+  font-weight: normal;
+}
+.description p {
+  color: rgba(0,0,0,0.5);
+  font-weight: lighter;
+}
+
+.col-xs-3 {
+  padding: 0;
+  position: relative;
+  margin-right: 3em;
+}

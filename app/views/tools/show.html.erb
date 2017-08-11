@@ -1,21 +1,77 @@
-<div class="container">
-  <div class="text-center">
-    <h2> <%= @tool.title %> </h2>
-    <h1> <%= @tool.caracteristics %> </h1>
-    <h1> <%= @tool.description %> </h1>
-    <h1> <%= @tool.price_per_day %> €/day </h1>
-    <p> <%= link_to 'Edit |', edit_tool_path %>
-        <%= link_to 'Back |', tools_path %>
-        <%= link_to 'Your bookings', bookings_path %></p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid Layout demo</title>
 
-      <BR>
-      <H2>Book this tool !</H2>
-      <%= simple_form_for([@tool, @booking]) do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-      <BR>
-        <%= f.button :submit %>
-      <% end %>
-      <BR>
+    <!-- Bootstrap + Fontawesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <br>
+  <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="title"><%= @tool.title %> </h3>
+        <br>
+
+          <div class="stat">
+            <div class="stat-content">
+                <h3><%= @tool.caracteristics %> </h3>
+            </div>
+          </div>
+          <div class="description">
+            <div class="description-content">
+              <p class="text-justify">
+                <%= @tool.description %>
+              </p>
+            </div>
+          </div>
+          <div class="links">
+            <div class="links-content">
+             <p> <%= link_to 'Edit |', edit_tool_path %>
+              <%= link_to 'Back |', tools_path %>
+              <%= link_to 'Your bookings', bookings_path %></p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="main">
+            <div class="main-content">
+              <h3><%= @tool.price_per_day %> $ per day</h3>
+              <h2>Book this tool !</h2>
+              <%= simple_form_for([@tool, @booking]) do |f| %>
+                <%= f.input :start_date %>
+                <%= f.input :end_date %>
+                <%= f.button :submit, class: 'btn-primary' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2">
+            <div class="stat">
+              <div class="stat-content">
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </div>
-</div>
+</body>
+</html>

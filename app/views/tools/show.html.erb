@@ -1,12 +1,12 @@
 <div class="container">
   <div class="text-center">
-    <h1> <%= @tool.title %> </h1>
-    <p> <%= @tool.caracteristics %> </p>
-    <p> <%= @tool.description %> </p>
-    <p> <%= @tool.price_per_day %> </p>
-    <%= link_to 'Edit', edit_tool_path %>
-    <%= link_to 'Back', tools_path %>
-    <%= link_to 'Your bookings', bookings_path %>
+    <h2> <%= @tool.title %> </h2>
+    <h1> <%= @tool.caracteristics %> </h1>
+    <h1> <%= @tool.description %> </h1>
+    <h1> <%= @tool.price_per_day %> €/day </h1>
+    <p> <%= link_to 'Edit |', edit_tool_path %>
+        <%= link_to 'Back |', tools_path %>
+        <%= link_to 'Your bookings', bookings_path %></p>
 
       <BR>
       <H2>Book this tool !</H2>

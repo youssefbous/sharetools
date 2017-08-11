@@ -7,12 +7,15 @@
             <h1><%= tool.title.upcase %></h1>
             <h1><%= tool.price_per_day %> €/day</h1>
           </div>
-          <div class="card-image" style="background-image: url('<%= image_path("drill.jpg") %>')" %>
+          <div class="card-image" style="background-image: url('<%= tool_image_path(tool) %>')">
           </div>
           <div class="card-description">
             <p><%= tool.description %></p>
           </div>
+<<<<<<< HEAD
           <%= link_to "En savoir plus", tool_path(tool), class: 'card-link' %>
+=======
+>>>>>>> master
         </div>
       </div>
     <% end -%>

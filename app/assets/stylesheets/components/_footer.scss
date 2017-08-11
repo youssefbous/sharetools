@@ -2,22 +2,31 @@
 .footer {
   display: flex;
   align-items: center;
-  color: #ACADAC;
-  height: $footer-height;
+  justify-content: space-between;
+  height: 70px;
   background: #606060;
   width: 100%;
-  display: flex;
-  color: white;
+
 }
 
 .footer-links {
-  color: #ACADAC;
   margin-left: 50px;
-  vertical-align: center;
 }
 
 .footer-copyright {
-  margin-right: none;
-  margin-left: 4em;
+  margin-right: 50px;
 }
 
+.footer p {
+  color: #BDBDBD;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.footer a {
+  color: #BDBDBD;
+}
+
+.h_over_footer a {
+  color: #F2F2F2;
+}

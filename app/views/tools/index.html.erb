@@ -1,21 +1,17 @@
-<div class="container">
-  <div class="row">
-  <% @tools.each do |tool| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card">
-          <div class="card-header">
-            <h1><%= tool.title.upcase %></h1>
-            <h1><%= tool.price_per_day %> €/day</h1>
+<div id="tools-list">
+  <div class="container">
+    <div class="row">
+    <% @tools.each do |tool| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('<%= tool_image_path(tool) %>');">
+            <div class="card-category"><%= tool.price_per_day %> € / day</div>
+            <div class="card-description">
+              <h2><%= tool.title %></h2>
+            </div>
+            <%= link_to '', tool_path(tool), class: 'card-link' %>
           </div>
-          <div class="card-image" style="background-image: url('<%= tool_image_path(tool) %>')">
-          </div>
-          <div class="card-description">
-            <p><%= tool.description %></p>
-          </div>
-          <p><%= link_to "En savoir plus", tool_path(tool), class: 'card-link' %></p>
         </div>
-      </div>
-    <% end -%>
+      <% end -%>
+    </div>
   </div>
 </div>
-

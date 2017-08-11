@@ -1,5 +1,5 @@
 .custom-navbar {
-  height: 70px;
+  height: $navbar-height;
   background-color: #efefef;
   display: flex;
   justify-content: space-between;
@@ -23,26 +23,27 @@
   .navbar-link:last-child {
     border: none;
   }
-}
 
-div {
-  display: block;
-  text-decoration-line: none;
-  text-decoration-style: wavy;
-  text-decoration-color: white;
-  color: #2381d0;
-  font-size: 20px;
-  justify-content: align;
-  font-weight: regular;
-}
+  div {
+    display: block;
+    text-decoration-line: none;
+    text-decoration-style: wavy;
+    text-decoration-color: white;
+    color: #2381d0;
+    font-size: 20px;
+    justify-content: align;
+    font-weight: regular;
+  }
 
-.logotitle {
-  display: flex;
-  align-items: center;
+  .logotitle {
+    display: flex;
+    align-items: center;
 
-  h2 {
-    margin: 0;
-    font-weight: 700;
-    padding-left: 15px;
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      padding-left: 15px;
+    }
   }
 }
+

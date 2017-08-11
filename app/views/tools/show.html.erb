@@ -1,66 +1,43 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grid Layout demo</title>
-
-    <!-- Bootstrap + Fontawesome CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-  <br>
-  <br>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-sm-12">
-          <h1 id="title"><%= @tool.title %> </h1>
-        <br>
-          <h3><%= @tool.caracteristics %> </h3>
-          <h3><%= @tool.description %></h3>
-          <div class="links">
-            <div class="links-content">
-             <p> <%= link_to 'Edit |', edit_tool_path %>
+<div id="show-tool">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+          <div class="contrasted">
+            <h3 id="title"><%= @tool.title %> </h3>
+            <div class="row">
+              <span class="col-xs-3 title">Caractéristiques</span>
+              <span class="col-xs-9 value"><%= @tool.caracteristics %></span>
+            </div>
+            <div class="row">
+              <span class="col-xs-3 title">Description</span>
+              <span class="col-xs-9 value"><%= @tool.description %></span>
+            </div>
+            <div class="row">
+              <span class="col-xs-3 title">Price per day</span>
+              <span class="col-xs-9 value"><%= @tool.price_per_day %> €</span>
+            </div>
+            <div class="row">
+              <span class="col-xs-3 title">Picture</span>
+              <span class="col-xs-9 value"><%= image_tag 'http://placehold.it/100x100' %></span>
+            </div>
+            <p>
+              <%= link_to 'Edit |', edit_tool_path %>
               <%= link_to 'Back |', tools_path %>
-              <%= link_to 'Your bookings', bookings_path %></p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="main">
-            <div class="main-content">
-              <h3><%= @tool.price_per_day %> $ per day</h3>
-              <h2>Book this tool !</h2>
-              <%= simple_form_for([@tool, @booking]) do |f| %>
-                <%= f.input :start_date %>
-                <%= f.input :end_date %>
-                <%= f.button :submit, class: 'btn-primary' %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2">
-            <div class="stat">
-              <div class="stat-content">
-
-              </div>
-            </div>
+              <%= link_to 'Your bookings', bookings_path %>
+            </p>
           </div>
       </div>
-    </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <div class="col-xs-12 col-sm-4">
+        <div class="book-form contrasted">
+          <h3>Book this tool !</h3>
+          <%= simple_form_for([@tool, @booking]) do |f| %>
+            <%= f.input :start_date, as: :string %>
+            <%= f.input :end_date, as: :string %>
+            <%= f.button :submit, class: 'btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</div>

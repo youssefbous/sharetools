@@ -16,21 +16,10 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-sm-12">
-          <h3 id="title"><%= @tool.title %> </h3>
+          <h1 id="title"><%= @tool.title %> </h1>
         <br>
-
-          <div class="stat">
-            <div class="stat-content">
-                <h3><%= @tool.caracteristics %> </h3>
-            </div>
-          </div>
-          <div class="description">
-            <div class="description-content">
-              <p class="text-justify">
-                <%= @tool.description %>
-              </p>
-            </div>
-          </div>
+          <h3><%= @tool.caracteristics %> </h3>
+          <h3><%= @tool.description %></h3>
           <div class="links">
             <div class="links-content">
              <p> <%= link_to 'Edit |', edit_tool_path %>

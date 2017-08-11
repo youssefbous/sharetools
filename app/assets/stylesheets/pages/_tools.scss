@@ -1,51 +1,86 @@
-h1 {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: helvetica;
-  border-radius: 5px;
+#tools-list {
+  margin-bottom: 20px;
 }
 
-label {
-  color: #dd7e18;
-  opacity: 0.5;
-  font-size: 20px;
-  border-radius: 6px;
-  font-weight: normal;
-  text-align: center;
+#show-tool {
+  margin: 20px 0;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .book-form {
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  .title {
+    color: #999;
+    text-align: right;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .value {
+    color: #444;
+  }
 }
 
-.btn.btn-default {
-  width: 24em;
-  length: 10em;
+.contrasted {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
-.btn.btn-default .hoover {
-  background: orange;
-  transition: 0,7s;
-}
+// h1 {
+//   font-size: 20px;
+//   font-weight: bold;
+//   font-family: helvetica;
+//   border-radius: 5px;
+// }
 
-abbr[title="required"] {
-  display: none;
-}
+// label {
+//   color: #dd7e18;
+//   opacity: 0.5;
+//   font-size: 20px;
+//   border-radius: 6px;
+//   font-weight: normal;
+//   text-align: center;
+// }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    border-radius: 5px;
-    hoover: orange;
-}
+// .btn.btn-default {
+//   width: 24em;
+//   length: 10em;
+// }
 
-a {
-  color: #469AE0;
-}
+// .btn.btn-default .hoover {
+//   background: orange;
+//   transition: 0,7s;
+// }
 
-textarea.form-control {
-  height: 242px;
-  border-radius: 5px;
-}
+// abbr[title="required"] {
+//   display: none;
+// }
 
-.form-control {
-  border-radius: 5px;
-  width: 600px;
-}
+// button, html input[type="button"], input[type="reset"], input[type="submit"] {
+//     -webkit-appearance: button;
+//     cursor: pointer;
+//     border-radius: 5px;
+//     hoover: orange;
+// }
+
+// a {
+//   color: #469AE0;
+// }
+
+// textarea.form-control {
+//   height: 242px;
+//   border-radius: 5px;
+// }
+
+// .form-control {
+//   border-radius: 5px;
+//   width: 600px;
+// }
 
